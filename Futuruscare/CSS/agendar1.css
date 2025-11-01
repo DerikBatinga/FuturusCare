@@ -1,0 +1,788 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Header - Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0c2d6b;
+}
+
+.navbar .logo img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+    color: #8a2be2;
+    font-weight: 600;
+}
+
+.nav-links li a:hover {
+    color: #8a2be2;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #222;
+    border-color: #ddd;
+}
+
+.btn-outline:hover {
+    border-color: #8a2be2;
+    color: #8a2be2;
+}
+
+.btn-primary {
+    background-color: #8a2be2;
+    color: white;
+    border-color: #8a2be2;
+}
+
+.btn-primary:hover {
+    background-color: #7a1fd4;
+}
+
+/* Main content */
+.main-content {
+    background: #f8f6ff;
+    min-height: 100vh;
+    padding: 120px 0 60px;
+}
+
+.container-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.titulo-agendar {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+.titulo-agendar .highlight {
+    color: #8b5cf6;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #64748b;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    font-weight: 400;
+}
+
+/* Container dos passos numerados */
+.container-passos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linha-passos {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    right: 22px;
+    height: 2px;
+    background: #e0d4ff;
+    z-index: 1;
+}
+
+.numeros-passos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.circulo-passo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #e0d4ff;
+    color: #9f7aea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.circulo-passo.ativo {
+    background: #8b5cf6;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+/* Grid principal de cartões */
+.grid-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.grid-inferior {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo dos cartões */
+.cartao {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cartao:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+.container-icone {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #e0d4ff 0%, #f0e7ff 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 36px;
+}
+
+.titulo-cartao {
+    color: #1a1a1a;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.3px;
+}
+
+.descricao-cartao {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 48px;
+}
+
+.botao-cartao {
+    background: #8b5cf6;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: -0.2px;
+}
+
+.botao-cartao:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: #0c1220;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    max-width: 220px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    background: #c03ee7;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 75, 92, 0.4);
+}
+
+.footer-links, .footer-services {
+    flex: 1 1 150px;
+    margin-bottom: 20px;
+}
+
+.footer-links h4, .footer-services h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul, .footer-services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-services li {
+    margin-bottom: 12px;
+}
+
+.footer-links a, .footer-services a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover, .footer-services a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.footer-bottom .heart {
+    color: #c03ee7;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .navbar .logo {
+        font-size: 20px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .buttons {
+        gap: 8px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding: 100px 0 40px;
+    }
+    
+    .container-principal {
+        padding: 0 20px;
+    }
+
+    .titulo-agendar {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+    
+    .subtitulo {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .container-passos {
+        max-width: 300px;
+        margin-bottom: 40px;
+    }
+
+    .circulo-passo {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .linha-passos {
+        left: 16px;
+        right: 16px;
+    }
+
+    .grid-cartoes,
+    .grid-inferior {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+    }
+    
+    .cartao {
+        padding: 30px 25px;
+    }
+    
+    .container-icone {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .titulo-cartao {
+        font-size: 20px;
+    }
+    
+    .descricao-cartao {
+        font-size: 14px;
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .botao-cartao {
+        padding: 10px 24px;
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 30px 15px 15px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-brand {
+        margin-bottom: 0;
+    }
+    
+    .footer-logo {
+        max-width: 180px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-brand p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-contact p {
+        font-size: 13px;
+        margin: 6px 0;
+    }
+    
+    .footer-social {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    
+    .footer-social a {
+        margin: 0 8px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    
+    .footer-links, .footer-services {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .footer-links h4, .footer-services h4 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .footer-links li, .footer-services li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-links a, .footer-services a {
+        font-size: 13px;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-agendar {
+        font-size: 28px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .container-passos {
+        max-width: 250px;
+    }
+
+    .circulo-passo {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .linha-passos {
+        left: 16px;
+        right: 16px;
+    }
+
+    .cartao {
+        padding: 25px 20px;
+    }
+
+    .container-icone {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .titulo-cartao {
+        font-size: 18px;
+    }
+
+    .descricao-cartao {
+        font-size: 13px;
+    }
+}
+
+/* Responsivo para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-principal {
+        padding: 0 40px;
+    }
+    
+    .titulo-agendar {
+        font-size: 40px;
+    }
+    
+    .grid-cartoes {
+        gap: 25px;
+    }
+    
+    .grid-inferior {
+        gap: 25px;
+    }
+    
+    .cartao {
+        padding: 35px 25px;
+    }
+}
+
+/* ===== RESPONSIVIDADE PARA TV E PROJETOR ===== */
+
+/* Para TVs e projetores (acima de 1600px) */
+@media screen and (min-width: 1601px) {
+    .container-principal {
+        max-width: 1400px;
+    }
+    
+    .titulo-agendar {
+        font-size: 52px;
+    }
+    
+    .subtitulo {
+        font-size: 22px;
+    }
+    
+    .grid-cartoes {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+    
+    .cartao {
+        padding: 50px 35px;
+    }
+    
+    .container-icone {
+        width: 100px;
+        height: 100px;
+        font-size: 42px;
+    }
+    
+    .titulo-cartao {
+        font-size: 24px;
+    }
+    
+    .descricao-cartao {
+        font-size: 16px;
+    }
+}
+
+/* Para projetores grandes e TVs 4K (acima de 2000px) */
+@media screen and (min-width: 2001px) {
+    .container-principal {
+        max-width: 1600px;
+    }
+    
+    .titulo-agendar {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+    
+    .subtitulo {
+        font-size: 24px;
+        margin-bottom: 80px;
+    }
+    
+    .grid-cartoes {
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .grid-inferior {
+        max-width: 1000px;
+        gap: 40px;
+    }
+    
+    .cartao {
+        padding: 60px 40px;
+        border-radius: 25px;
+    }
+    
+    .container-icone {
+        width: 120px;
+        height: 120px;
+        font-size: 48px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .titulo-cartao {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    
+    .descricao-cartao {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    
+    .botao-cartao {
+        padding: 15px 35px;
+        font-size: 16px;
+        border-radius: 30px;
+    }
+    
+    /* Ajustes no header para telas grandes */
+    .navbar {
+        padding: 20px 60px;
+    }
+    
+    .navbar .logo {
+        font-size: 28px;
+    }
+    
+    .navbar .logo img {
+        max-height: 70px;
+    }
+    
+    .nav-links {
+        gap: 30px;
+    }
+    
+    .nav-links li a {
+        font-size: 17px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    /* Ajustes nos passos */
+    .container-passos {
+        max-width: 500px;
+        margin-bottom: 80px;
+    }
+    
+    .circulo-passo {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .linha-passos {
+        top: 25px;
+        left: 25px;
+        right: 25px;
+    }
+}
+
+/* Para TVs muito grandes (acima de 2500px) */
+@media screen and (min-width: 2501px) {
+    .container-principal {
+        max-width: 1800px;
+    }
+    
+    .titulo-agendar {
+        font-size: 70px;
+    }
+    
+    .subtitulo {
+        font-size: 26px;
+    }
+    
+    body {
+        font-size: 18px;
+    }
+}
+
+/* ===== RESPONSIVIDADE EXISTENTE (MANTIDA INTACTA) ===== */
+
+/* Responsivo para tablets - MANTIDO ORIGINAL */
+@media (min-width: 769px) and (max-width: 1024px) {}
+    .container-principal {
+        padding: 0 40px;
+    }
+    
+    .titulo-agendar {
+        font-size: 40px;
+    }
+    
+    .grid-cartoes {
+        gap: 25px;
+    }

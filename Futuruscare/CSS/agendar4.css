@@ -1,0 +1,749 @@
+ /*  RESET E CONFIGURAÇÕES GLOBAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* ==================== HEADER - NAVBAR ==================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0c2d6b;
+        }
+
+        .navbar .logo img {
+            max-height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .right-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #222;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a.active {
+            color: #8a2be2;
+            font-weight: 600;
+        }
+
+        .nav-links li a:hover {
+            color: #8a2be2;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #222;
+            border-color: #ddd;
+        }
+
+        .btn-outline:hover {
+            border-color: #8a2be2;
+            color: #8a2be2;
+        }
+
+        .btn-primary {
+            background-color: #8a2be2;
+            color: white;
+            border-color: #8a2be2;
+        }
+
+        .btn-primary:hover {
+            background-color: #7a1fd4;
+        }
+
+        /* ==================== MAIN CONTENT ==================== */
+        .main-content {
+            background: #f8f6ff;
+            min-height: 100vh;
+            padding: 120px 0 60px;
+        }
+
+        .container-principal {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .titulo-agendar {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 45px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+        }
+
+        .titulo-agendar .highlight {
+            color: #8b5cf6;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #64748b;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+
+        /* ==================== CONTAINER DOS PASSOS NUMERADOS ==================== */
+        .container-passos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .linha-passos {
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            right: 22px;
+            height: 2px;
+            background: #10b981; /* Verde para indicar todas as etapas concluídas */
+            z-index: 1;
+        }
+
+        .numeros-passos {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .circulo-passo {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #e0d4ff;
+            color: #9f7aea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .circulo-passo.ativo {
+            background: #8b5cf6;
+            color: white;
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+        }
+
+        .circulo-passo.concluido {
+            background: #10b981;
+            color: white;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        /* ==================== RESUMO DO AGENDAMENTO ==================== */
+        .resumo-agendamento {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        /* Card do serviço selecionado */
+        .card-servico {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #f1f5f9;
+            text-align: center;
+        }
+
+        .icone-servico {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .titulo-servico {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .descricao-servico {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Card do profissional selecionado */
+        .card-profissional-resumo {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #f1f5f9;
+        }
+
+        .conteudo-profissional {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar-profissional-resumo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+            font-size: 32px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .info-profissional-resumo {
+            flex: 1;
+        }
+
+        .nome-profissional-resumo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .especialidade-profissional {
+            color: #64748b;
+            font-size: 15px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .avaliacao-resumo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .estrelas-resumo {
+            color: #f59e0b;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .nota-avaliacao-resumo {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .valor-servico {
+            color: #10b981;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        /* Card da data e horário */
+        .card-data-horario {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border: 1px solid #f1f5f9;
+            text-align: center;
+        }
+
+        .icone-calendario {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .info-agendamento {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .item-agendamento {
+            text-align: center;
+        }
+
+        .label-agendamento {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .valor-agendamento {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        /* ==================== BOTÃO DE FINALIZAR ==================== */
+        .container-finalizacao {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .botao-finalizar {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: -0.3px;
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+        }
+
+        .botao-finalizar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(139, 92, 246, 0.4);
+        }
+
+        .botao-finalizar:active {
+            transform: translateY(-1px);
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background-color: #0c1220;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            flex: 1 1 300px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            max-width: 220px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer-contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            color: #fff;
+            font-size: 24px;
+            margin-right: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover {
+            background: #c03ee7;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 75, 92, 0.4);
+        }
+
+        .footer-links, .footer-services {
+            flex: 1 1 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4, .footer-services h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul, .footer-services ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li, .footer-services li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a, .footer-services a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover, .footer-services a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            text-align: center;
+            padding-top: 15px;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        .footer-bottom .heart {
+            color: #c03ee7;
+        }
+
+        /* ==================== RESPONSIVIDADE PARA MOBILE ==================== */
+        @media (max-width: 768px) {
+            /* Navbar responsivo */
+            .navbar {
+                padding: 10px 20px;
+                flex-wrap: wrap;
+            }
+            
+            .navbar .logo {
+                font-size: 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .buttons {
+                gap: 8px;
+            }
+            
+            .btn {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+
+            /* Main content responsivo */
+            .main-content {
+                padding: 100px 0 40px;
+            }
+            
+            .container-principal {
+                padding: 0 20px;
+            }
+
+            .titulo-agendar {
+                font-size: 32px;
+                letter-spacing: -1px;
+            }
+            
+            .subtitulo {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .container-passos {
+                max-width: 300px;
+                margin-bottom: 40px;
+            }
+
+            .circulo-passo {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+
+            .linha-passos {
+                left: 16px;
+                right: 16px;
+            }
+
+            /* Cards responsivos */
+            .card-servico,
+            .card-profissional-resumo,
+            .card-data-horario {
+                padding: 25px 20px;
+            }
+
+            .icone-servico {
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            .titulo-servico {
+                font-size: 20px;
+            }
+
+            .descricao-servico {
+                font-size: 14px;
+            }
+
+            .conteudo-profissional {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .avatar-profissional-resumo {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .nome-profissional-resumo {
+                font-size: 20px;
+            }
+
+            .especialidade-profissional {
+                font-size: 14px;
+            }
+
+            .info-agendamento {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .botao-finalizar {
+                padding: 15px 40px;
+                font-size: 16px;
+            }
+
+            /* Footer responsivo */
+            .footer {
+                padding: 30px 15px 15px;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .footer-brand {
+                margin-bottom: 0;
+            }
+            
+            .footer-logo {
+                max-width: 180px;
+                margin-bottom: 12px;
+            }
+            
+            .footer-brand p {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+            
+            .footer-contact p {
+                font-size: 13px;
+                margin: 6px 0;
+            }
+            
+            .footer-social {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            .footer-social a {
+                margin: 0 8px;
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+            }
+            
+            .footer-links, .footer-services {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            .footer-links h4, .footer-services h4 {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .footer-links li, .footer-services li {
+                margin-bottom: 8px;
+            }
+            
+            .footer-links a, .footer-services a {
+                font-size: 13px;
+            }
+            
+            .footer-bottom {
+                margin-top: 20px;
+                padding-top: 12px;
+                font-size: 12px;
+            }
+        }
+
+        /* Responsividade para smartphones menores */
+        @media (max-width: 480px) {
+            .titulo-agendar {
+                font-size: 28px;
+            }
+
+            .subtitulo {
+                font-size: 14px;
+            }
+
+            .container-passos {
+                max-width: 250px;
+            }
+
+            .circulo-passo {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+
+            .linha-passos {
+                left: 16px;
+                right: 16px;
+            }
+
+            .card-servico,
+            .card-profissional-resumo,
+            .card-data-horario {
+                padding: 20px 15px;
+            }
+
+            .titulo-servico {
+                font-size: 18px;
+            }
+
+            .nome-profissional-resumo {
+                font-size: 18px;
+            }
+        }
+
+        /* Responsividade para tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container-principal {
+                padding: 0 40px;
+            }
+            
+            .titulo-agendar {
+                font-size: 40px;
+            }
+            
+            .card-servico,
+            .card-profissional-resumo,
+            .card-data-horario {
+                padding: 35px 30px;
+            }
+        }
