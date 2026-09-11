@@ -8,13 +8,18 @@ Tem como objetivo ajudar o tutor na rotina de cuidado de seu pet, onde seria pos
 ## Integrantes do projeto
 - **David Texeira-<a href="https://github.com/davidteixeira23">Perfil</a>** 
 - **Derik Soares Batinga-<a href="https://github.com/SrDerik">Perfil</a>**
-- **Enzo Caldeira-<a href="https://github.com/enzo-caldeira07">Perfil</a>**
+- **Erick Guarassy-<a href="https://github.com/enzo-caldeira07">Perfil</a>**
 - **Gustavo Lacerda-<a href="https://github.com/GGustavo-lac">Perfil</a>** 
 - **Isaac Dantas Nogueira-<a href="https://github.com/Isaac-Nogueira">Perfil</a>** 
 
 ## Tecnologias Utilizadas
-
+  
+  **Web**
 - **Linguagens:** HTML 5, CSS 3, JavaScript
 - **Frameworks:** Nenhum
-- **Outras:** Nenhum
+- **Outras:** MySQL
 
+  **Mobile**
+- **Linguagens:** Kotlin
+- **Frameworks:** Compose
+- **Outras:** SQLite, ROOM
