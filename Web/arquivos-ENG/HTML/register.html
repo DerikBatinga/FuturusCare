@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="keywords" content="Pet sitting, take care of your pet consciously"> 
+    <meta name="author" content="David, Derik, Enzo, Gustavo, Isaac ">
+    <link rel="icon" href="../IMAGENS E VIDEOS/favcon.png" type="image/x-icon">
+    <title>Registration - Futurus Care</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <a href="#" class="back-arrow">←</a>
+        </div>
+
+
+        <div class="right-side">
+            <div class="form-container">
+                <h1>Registration</h1>
+                <p>Create an account now and join our company!</p>
+
+                <div class="option">
+                    <span>Create your Client Profile to hire our professionals!</span>
+                    <button class="continue-btn">Continue</button>
+                </div>
+
+                <div class="option">
+                    <span>Create an account now and join our Company!</span>
+                    <button class="continue-btn">Continue</button>
+                </div>
+
+                <div class="option">
+                    <span>Register your pet so we can take care of them with love!</span>
+                    <button class="continue-btn">Continue</button>
+                </div>
+            </div>
+        </div>
+     
+  <script>
+  const buttons = document.querySelectorAll('.continue-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      window.location.href = 'register-prof.html'; // <-- Change to the desired link
+    });
+  });
+</script>
+    </body>
+</html>
+</html>

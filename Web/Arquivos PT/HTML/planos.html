@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="Ie=edge">
+    <meta name="keywords" content="Petsitting, cuide de seu pet com conciencia "> 
+    <meta name="author" content="David, Derik, Enzo, Gustavo, Isaac ">
+    <link rel="icon" href="../IMAGENS E VIDEOS/favcon.png" type="image/x-icon">
+    <title>FuturusCare - Planos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/CSS/all.min.css">
+    <link rel="stylesheet" href="../CSS/planos.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navegacao">
+        <div class="logo"><img src="../IMAGENS%20E%20VIDEOS/logoFuturusCare.png" alt="FuturusCare Logo"></div>
+        <div class="menu-mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="lado-direito">
+            <ul class="links-navegacao">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="../HTML/planos.html" class="ativo">Planos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="botoes">
+                <a href="#" class="botao botao-contorno">Cadastrar</a>
+                <a href="#" class="botao botao-primario">Entrar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero dos Planos -->
+    <section class="hero-planos">
+        <h1>Nossos <span class="destaque">Planos</span></h1>
+        <p>Cuidados profissionais com planos pensados para você e seu pet.</p>
+        
+        <!-- Alternar Mensal/Anual -->
+        <div class="alternar-plano">
+            <div class="botoes-alternar">
+                <button class="botao-alternar ativo" id="botao-mensal">Mensal</button>
+                <button class="botao-alternar" id="botao-anual">Anual</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Container dos Planos -->
+    <div class="container-planos" id="container-planos">
+        <!-- Plano Essencial -->
+        <div class="cartao-plano">
+            <div class="cabecalho-plano">
+                <h3 class="nome-plano">Plano Essencial</h3>
+                <div class="preco-plano" id="preco-essencial">R$ 80</div>
+                <p class="periodo-plano" id="periodo-essencial">Por mês</p>
+            </div>
+            
+            <button class="botao-plano">Quero esse plano</button>
+            
+            <div class="vantagens-plano">
+                <h4 class="titulo-vantagens">Vantagens</h4>
+                <ul class="lista-vantagens">
+                    <li>2 visitas semanais de 30 minutos</li>
+                    <li>Alimentação e troca da água</li>
+                    <li>Relatório básico por mensagem</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plano Total (Popular) -->
+        <div class="cartao-plano popular">
+            <div class="selo-popular">
+                <i class="fas fa-star"></i>
+                <span>Mais Popular</span>
+            </div>
+            <div class="cabecalho-plano">
+                <h3 class="nome-plano">Plano Total</h3>
+                <div class="preco-plano" id="preco-total">R$ 350</div>
+                <p class="periodo-plano" id="periodo-total">Por mês</p>
+            </div>
+            
+            <button class="botao-plano">Quero esse plano</button>
+            
+            <div class="vantagens-plano">
+                <h4 class="titulo-vantagens">Vantagens</h4>
+                <ul class="lista-vantagens">
+                    <li>Visitas diárias de 1 hora</li>
+                    <li>Passeios até 3 vezes por semana</li>
+                    <li>Higiene básica (escovação)</li>
+                    <li>Relatórios detalhados e fotos diárias</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plano Completo -->
+        <div class="cartao-plano">
+            <div class="cabecalho-plano">
+                <h3 class="nome-plano">Plano Completo</h3>
+                <div class="preco-plano" id="preco-completo">R$ 180</div>
+                <p class="periodo-plano" id="periodo-completo">Por mês</p>
+            </div>
+            
+            <button class="botao-plano">Quero esse plano</button>
+            
+            <div class="vantagens-plano">
+                <h4 class="titulo-vantagens">Vantagens</h4>
+                <ul class="lista-vantagens">
+                    <li>4 visitas semanais de 45 minutos</li>
+                    <li>Passeio semanal de até 30 minutos</li>
+                    <li>Fotos e mensagens semanais</li>
+                    <li>Administração de remédios simples</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="marca-rodape">
+                <img src="../IMAGENS%20E%20VIDEOS/logoFuturusCare.png" alt="FuturusCare" class="logo-rodape">
+                <p>
+                    Cuidamos do seu pet com todo amor e carinho que ele merece.<br>
+                    Serviços profissionais de pet sitting em São Paulo e região.
+                </p>
+                <div class="contato-rodape">
+                    <p>📧 <a href="mailto:contato@futuruscare.com">contato@futuruscare.com</a></p>
+                    <p>📞 <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                </div>
+                <div class="social-rodape">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="links-rodape">
+                <h4>Links rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="../HTML/depoimentos.html">Depoimentos</a></li>
+                </ul>
+            </div>
+            <div class="servicos-rodape">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Pet Sitting Diário</a></li>
+                    <li><a href="#">Hospedagem em Casa</a></li>
+                    <li><a href="#">Passeios</a></li>
+                    <li><a href="#">Cuidados Especiais</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-inferior">
+            <p>© 2025 Futurus Care. Todos os direitos reservados. Feito com <span class="coracao">❤</span> para você e seu pet.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/planos.js"></script>
+</body>
+</html>
