@@ -1,0 +1,1463 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Geral */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Root */
+:root {
+  --preto: black;
+  --cinza: #555;
+  --branco: white;
+  --cor-principal: #ba34db;
+  --cor-secundaria: rgb(0, 149, 255);
+  --fonte-texto: 'Open-sans', sans-serif;
+  --fonte-subtitulo: 'Poppins', sans-serif;
+  --fonte-titulo: 'Montserrat', sans-serif;
+}
+
+/* Coisas gerais */
+body {
+    color: var(--preto);
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* ===== BARRA DE NAVEGAÇÃO ===== */
+.barra-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    border-bottom: 12px solid #eee;
+    position: relative;
+    z-index: 100;
+}
+
+.barra-navegacao .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0c2d6b;
+    z-index: 1001;
+}
+
+.barra-navegacao .logo img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* Alternador menu mobile */
+.alternador-menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #222;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Seção direita - agrupa links e botões */
+.secao-direita {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Links de navegação */
+.links-navegacao {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.links-navegacao li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links-navegacao li a.ativo {
+    color: #8a2be2;
+    font-weight: 600;
+}
+
+.links-navegacao li a:hover {
+    color: #8a2be2;
+}
+
+/* Botões da barra de navegação */
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botao {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.botao-contorno {
+    background-color: transparent;
+    color: #222;
+    border-color: #ddd;
+}
+
+.botao-contorno:hover {
+    border-color: #8a2be2;
+    color: #8a2be2;
+}
+
+.botao-primario {
+    background-color: #8a2be2;
+    color: white;
+    border-color: #8a2be2;
+}
+
+.botao-primario:hover {
+    background-color: #7a1fd4;
+}
+
+/* ===== SEÇÃO HERO/PRINCIPAL ===== */
+.secao-hero {
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Espaço para vídeo de fundo */
+.video-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.conteudo-hero {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-hero {
+    font-size: 64px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.subtitulo-hero {
+    font-size: 20px;
+    color: #2d3748;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.botoes-hero {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botao-hero {
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+}
+
+.botao-hero-primario {
+    background: #8b5cf6;
+    color: white;
+    border-color: #8b5cf6;
+}
+
+.botao-hero-primario:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.botao-hero-secundario {
+    background: transparent;
+    color: #6b7280;
+    border-color: #d1d5db;
+}
+
+.botao-hero-secundario:hover {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+    transform: translateY(-2px);
+}
+
+/* ===== SEÇÃO POR QUE ESCOLHER ===== */
+.secao-por-que-escolher {
+    padding: 100px 0;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 80px;
+    line-height: 1.6;
+}
+
+/* Grade de características */
+.grade-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.item-caracteristica {
+    text-align: center;
+}
+
+.icone-caracteristica {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fdf2f8 100%);
+}
+
+/* Cores específicas para cada ícone */
+.icone-caracteristica.casa { color: #f59e0b; }
+.icone-caracteristica.relogio { color: #ef4444; }
+.icone-caracteristica.coracao { color: #ec4899; }
+.icone-caracteristica.telefone { color: #3b82f6; }
+
+.titulo-caracteristica {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.descricao-caracteristica {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* ===== SEÇÃO DE ESTATÍSTICAS ===== */
+.secao-estatisticas {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    padding: 80px 0;
+}
+
+.container-estatisticas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.grade-estatisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+
+.item-estatistica {
+    text-align: center;
+}
+
+.numero-estatistica {
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    transition: all 0.3s ease;
+}
+
+.rotulo-estatistica {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* Animação de contagem dos números */
+.numero-estatistica.contando {
+    transform: scale(1.05);
+}
+
+/* ===== SEÇÃO DE SERVIÇOS PROFISSIONAIS ===== */
+.secao-negocios {
+    padding: 100px 0;
+    background: #fafbff;
+}
+
+.titulo-negocios {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo-negocios {
+    text-align: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 80px;
+}
+
+/* Grade de serviços com cards animados */
+.grade-servicos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Cards de serviços - efeito flip 3D */
+.cartao-servico {
+    height: 280px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.interior-cartao-servico {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Hover effect - gira o card */
+.cartao-servico:hover .interior-cartao-servico {
+    transform: rotateY(180deg);
+}
+
+/* Frente e verso do card */
+.frente-cartao-servico, .verso-cartao-servico {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Frente do card */
+.frente-cartao-servico {
+    background: white;
+    border: 2px solid #f1f5f9;
+}
+
+/* Verso do card */
+.verso-cartao-servico {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Ícones dos serviços */
+.icone-servico {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f3e8ff 0%, #fdf2f8 100%);
+}
+
+/* Cores específicas para cada serviço */
+.icone-servico.passeador { color: #f59e0b; }
+.icone-servico.veterinario { color: #3b82f6; }
+.icone-servico.tosador { color: #ec4899; }
+.icone-servico.cuidador { color: #8b5cf6; }
+
+.titulo-servico {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.descricao-servico {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* Estilos do verso do card */
+.verso-cartao-servico h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.verso-cartao-servico p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.verso-cartao-servico ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.verso-cartao-servico li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.verso-cartao-servico .preco {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fbbf24;
+}
+
+/* Informações e botões da seção */
+.info-negocios {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-negocios p {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.botoes-negocios {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.botao-negocios {
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+}
+
+.botao-negocios-primario {
+    background: #8b5cf6;
+    color: white;
+    border-color: #8b5cf6;
+}
+
+.botao-negocios-primario:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+.botao-negocios-secundario {
+    background: transparent;
+    color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+.botao-negocios-secundario:hover {
+    background: #8b5cf6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== SEÇÃO DE DEPOIMENTOS ===== */
+.secao-depoimentos {
+    padding: 100px 0;
+    background: white;
+}
+
+.titulo-depoimentos {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 80px;
+    letter-spacing: -1px;
+}
+
+.container-depoimento {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Card principal de depoimento */
+.cartao-depoimento {
+    background: #f8fafc;
+    padding: 60px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animações de transição dos depoimentos */
+.cartao-depoimento.desaparecendo {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.98);
+}
+
+.cartao-depoimento.aparecendo {
+    opacity: 0;
+    transform: translateX(20px) scale(0.98);
+}
+
+/* Estrelas de avaliação */
+.estrelas {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.estrela {
+    width: 32px;
+    height: 32px;
+    background: #fbbf24;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    filter: drop-shadow(0 2px 4px rgba(251, 191, 36, 0.3));
+}
+
+.texto-depoimento {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.autor-depoimento {
+    font-weight: 700;
+    color: #8b5cf6;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.meta-depoimento {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+/* Botões de navegação dos depoimentos */
+.container-botoes-navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.botao-navegacao {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-navegacao:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.botao-navegacao:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ===== TÍTULO NOSSA HISTÓRIA ===== */
+.nossa-historia {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fafbff;
+}
+
+.titulo-nossa-historia {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo-nossa-historia {
+    text-align: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: -30px;
+}
+
+/* ===== HISTÓRIA ===== */
+.secao-historia {
+  padding: 60px 0;
+  background: #fafbff;
+}
+
+.grade-historia {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.texto-historia h2 {
+  margin-bottom: 20px;
+  font-size: 2.0rem;
+}
+
+.texto-historia p {
+    font-size: 17px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.imagem-historia img {
+  max-width: 100%;
+  border-radius: 20px;
+   max-width: 100%;
+  border-radius: 20px;
+  float: right;
+  margin-left: 20px
+}
+
+/* ===== VALORES ===== */
+.secao-valores {
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.secao-valores h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 50px;
+}
+
+.grade-valores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cartao-valor {
+  background: #fafbff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.cartao-valor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.icone {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* ===== EQUIPE ===== */
+.secao-equipe {
+  padding: 60px 0;
+  background-color: #fafbff;
+  text-align: center;
+}
+
+.secao-equipe h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 50px;
+}
+
+.grade-equipe {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.membro-equipe {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.membro-equipe img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.membro-equipe h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.membro-equipe span {
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.membro-equipe p {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ===== CONQUISTAS ===== */
+.secao-conquistas {
+  background: #8b5cf6;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.grade-conquistas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.conquista .icone {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.conquista h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background-color: #0c1220;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px 20px;
+}
+
+.container-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo e informações da marca */
+.marca-rodape {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.logo-rodape {
+    max-width: 220px;
+    margin-bottom: 15px;
+}
+
+.marca-rodape p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Informações de contato */
+.contato-rodape p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.contato-rodape a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contato-rodape a:hover {
+    text-decoration: underline;
+}
+
+/* Redes sociais */
+.social-rodape {
+    margin-top: 20px;
+}
+
+.social-rodape a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+    display: inline-flex;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-rodape a:hover {
+    background: #c03ee7;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 75, 92, 0.4);
+}
+
+/* Links rápidos e serviços */
+.links-rodape, .servicos-rodape {
+    flex: 1 1 150px;
+    margin-bottom: 20px;
+}
+
+.links-rodape h4, .servicos-rodape h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.links-rodape ul, .servicos-rodape ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-rodape li, .servicos-rodape li {
+    margin-bottom: 12px;
+}
+
+.links-rodape a, .servicos-rodape a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links-rodape a:hover, .servicos-rodape a:hover {
+    text-decoration: underline;
+}
+
+/* Parte inferior do rodapé */
+.inferior-rodape {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.inferior-rodape .coracao {
+    color: #c03ee7;
+}
+
+/* ===== RESPONSIVO ===== */
+/* Tablets e dispositivos médios */
+@media (max-width: 1024px) {
+    .container, .container-estatisticas {
+        padding: 0 40px;
+    }
+    
+    .titulo-hero {
+        font-size: 48px;
+    }
+    
+    .titulo-secao, .titulo-depoimentos {
+        font-size: 36px;
+    }
+    
+    .titulo-negocios {
+        font-size: 32px;
+    }
+    
+    .grade-caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .grade-servicos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .grade-estatisticas {
+        gap: 40px;
+    }
+    
+    .subtitulo-hero {
+        font-size: 18px;
+    }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 768px) {
+    /* Barra de navegação mobile */
+    .barra-navegacao {
+        padding: 15px 20px;
+        flex-wrap: nowrap;
+    }
+    
+    .barra-navegacao .logo {
+        font-size: 20px;
+    }
+
+    .barra-navegacao .logo img {
+        max-height: 50px;
+    }
+    
+    .alternador-menu-mobile {
+        display: block;
+    }
+    
+    .links-navegacao {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+    
+    .links-navegacao.mobile-ativo {
+        left: 0;
+    }
+    
+    .links-navegacao li a {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .botoes {
+        display: none;
+    }
+
+    /* Seção hero mobile */
+    .secao-hero {
+        min-height: 500px;
+        padding: 40px 0;
+    }
+    
+    .conteudo-hero {
+        padding: 0 20px;
+    }
+
+    .titulo-hero {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    .subtitulo-hero {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .botoes-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .botao-hero {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    /* Seções mobile */
+    .container, .container-estatisticas {
+        padding: 0 20px;
+    }
+
+    .titulo-secao, .titulo-depoimentos {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .titulo-negocios {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    
+    .subtitulo-secao, .subtitulo-negocios {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    /* Seções com padding reduzido */
+    .secao-por-que-escolher, .secao-negocios, .secao-depoimentos {
+        padding: 60px 0;
+    }
+    
+    .secao-estatisticas {
+        padding: 50px 0;
+    }
+
+    /* Grids mobile */
+    .grade-caracteristicas {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .grade-estatisticas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .grade-servicos {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Cards mobile - versão simplificada sem efeito 3D */
+    .cartao-servico {
+        height: auto;
+        perspective: none;
+    }
+
+    .interior-cartao-servico {
+        transform: none !important;
+        transition: none;
+        position: static;
+    }
+
+    .cartao-servico:hover .interior-cartao-servico {
+        transform: none;
+    }
+
+    .frente-cartao-servico, .verso-cartao-servico {
+        position: static;
+        backface-visibility: visible;
+        transform: none !important;
+    }
+
+    .verso-cartao-servico {
+        margin-top: 20px;
+        border-radius: 15px;
+        padding: 25px 20px;
+    }
+
+    /* Botões mobile */
+    .botoes-negocios {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .botao-negocios {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+
+    /* Depoimentos mobile */
+    .cartao-depoimento {
+        padding: 30px 25px;
+        margin: 0 10px;
+    }
+
+    .texto-depoimento {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .autor-depoimento {
+        font-size: 16px;
+    }
+    
+    .meta-depoimento {
+        font-size: 14px;
+    }
+
+    .container-botoes-navegacao {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .botao-navegacao {
+        padding: 10px 20px;
+        font-size: 13px;
+        flex: 1;
+        max-width: 120px;
+    }
+    
+    .estrelas {
+        gap: 6px;
+    }
+    
+    .estrela {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Estatísticas mobile */
+    .numero-estatistica {
+        font-size: 42px;
+    }
+    
+    .rotulo-estatistica {
+        font-size: 16px;
+    }
+
+    /* Rodapé mobile */
+    .rodape {
+        padding: 30px 15px 15px;
+    }
+    
+    .container-rodape {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .marca-rodape {
+        margin-bottom: 0;
+    }
+    
+    .logo-rodape {
+        max-width: 180px;
+        margin: 0 auto 15px;
+    }
+    
+    .marca-rodape p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .contato-rodape p {
+        font-size: 13px;
+        margin: 6px 0;
+    }
+    
+    .social-rodape {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-rodape a {
+        margin: 0 8px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    
+    .links-rodape, .servicos-rodape {
+        margin: 0;
+    }
+    
+    .links-rodape h4, .servicos-rodape h4 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .links-rodape li, .servicos-rodape li {
+        margin-bottom: 8px;
+    }
+    
+    .links-rodape a, .servicos-rodape a {
+        font-size: 13px;
+    }
+    
+    .inferior-rodape {
+        margin-top: 20px;
+        padding-top: 12px;
+        font-size: 12px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .barra-navegacao {
+        padding: 12px 15px;
+    }
+    
+    .barra-navegacao .logo img {
+        max-height: 45px;
+    }
+    
+    .secao-hero {
+        min-height: 450px;
+    }
+    
+    .titulo-hero {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+    
+    .subtitulo-hero {
+        font-size: 14px;
+    }
+    
+    .titulo-secao, .titulo-depoimentos {
+        font-size: 24px;
+    }
+    
+    .titulo-negocios {
+        font-size: 24px;
+    }
+    
+    .subtitulo-secao, .subtitulo-negocios {
+        font-size: 14px;
+    }
+    
+    .container, .container-estatisticas {
+        padding: 0 15px;
+    }
+    
+    .cartao-depoimento {
+        padding: 25px 20px;
+        margin: 0 5px;
+    }
+    
+    .texto-depoimento {
+        font-size: 14px;
+    }
+    
+    .autor-depoimento {
+        font-size: 15px;
+    }
+    
+    .meta-depoimento {
+        font-size: 13px;
+    }
+    
+    .estrelas {
+        gap: 4px;
+        margin-bottom: 20px;
+    }
+    
+    .estrela {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .numero-estatistica {
+        font-size: 36px;
+    }
+    
+    .rotulo-estatistica {
+        font-size: 14px;
+    }
+    
+    .icone-caracteristica {
+        width: 70px;
+        height: 70px;
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    
+    .titulo-caracteristica {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .descricao-caracteristica {
+        font-size: 14px;
+    }
+    
+    .icone-servico {
+        width: 70px;
+        height: 70px;
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+    
+    .titulo-servico {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .descricao-servico {
+        font-size: 13px;
+    }
+    
+    .botao-hero {
+        max-width: 260px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .botao-negocios {
+        max-width: 280px;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+    
+    .botao-navegacao {
+        padding: 8px 16px;
+        font-size: 12px;
+        max-width: 100px;
+    }
+}
+
+/* Dispositivos extra pequenos */
+@media (max-width: 360px) {
+    .barra-navegacao {
+        padding: 6px 10px;
+    }
+    
+    .barra-navegacao .logo img {
+        max-height: 40px;
+    }
+    
+    .titulo-hero {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .subtitulo-hero {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+    
+    .titulo-secao, .titulo-depoimentos {
+        font-size: 22px;
+    }
+    
+    .titulo-negocios {
+        font-size: 22px;
+    }
+    
+    .container, .container-estatisticas {
+        padding: 0 10px;
+    }
+    
+    .conteudo-hero {
+        padding: 0 15px;
+    }
+    
+    .botao {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
