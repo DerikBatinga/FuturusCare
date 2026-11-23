@@ -15,7 +15,7 @@ Tem como objetivo ajudar o tutor na rotina de cuidado de seu pet, onde seria pos
 ## Tecnologias Utilizadas
   
   **Web**
-- **Linguagens:** HTML 5, CSS 3, JavaScript
+- **Linguagens:** HTML 5, CSS 3, JavaScript, PHP
 - **Frameworks:** Nenhum
 - **Outras:** MySQL
 
