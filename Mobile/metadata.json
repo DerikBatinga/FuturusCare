@@ -1,0 +1,6 @@
+{
+  "name": "FuturusCare",
+  "description": "Aplicativo FuturusCare para cuidados de pets: encontre cuidadores, cadastre seus pets, gerencie agendamentos e converse com profissionais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

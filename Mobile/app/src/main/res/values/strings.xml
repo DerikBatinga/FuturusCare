@@ -1,3 +1,115 @@
 <resources>
     <string name="app_name">FuturusCare</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_pets">Meus Pets</string>
+    <string name="nav_dashboard">Painel</string>
+    <string name="nav_clients">Clientes</string>
+    <string name="nav_agenda">Agenda</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_profile">Perfil</string>
+
+    <!-- Auth: Login & Cadastro -->
+    <string name="auth_brand_tagline">Cuidado de confiança para o seu melhor amigo</string>
+    <string name="auth_login_title">Entrar na sua conta</string>
+    <string name="auth_login_subtitle">Acesse seus pets, agendamentos e conversas</string>
+    <string name="auth_register_title">Criar conta</string>
+    <string name="auth_register_subtitle">Cadastre-se para encontrar cuidadores verificados</string>
+    <string name="auth_email_label">E-mail</string>
+    <string name="auth_password_label">Senha</string>
+    <string name="auth_confirm_password_label">Confirmar senha</string>
+    <string name="auth_login_button">Entrar</string>
+    <string name="auth_register_button">Finalizar Cadastro</string>
+    <string name="auth_go_to_register">Não tem conta? Cadastre-se</string>
+    <string name="auth_go_to_login">Já tem conta? Fazer login</string>
+
+    <!-- Home Screen -->
+    <string name="home_hero_title">Cuidado e carinho\npara o seu pet.</string>
+    <string name="home_hero_subtitle">Encontre quem cuida como você.</string>
+    <string name="home_search_caregiver">Buscar cuidador</string>
+    <string name="home_search_placeholder">Buscar cuidadores, serviços...</string>
+    <string name="home_popular_services">Serviços Populares</string>
+    <string name="home_see_all">Ver todos</string>
+    <string name="home_featured_caregivers">Cuidadores Disponíveis</string>
+    <string name="home_upcoming_bookings">Próximos Agendamentos</string>
+    <string name="home_no_bookings_message">Você ainda não tem agendamentos.</string>
+    <string name="home_schedule_care">Agendar um cuidado</string>
+    <string name="home_clear_filter">Limpar filtro</string>
+
+    <!-- Pets Screen & Registration -->
+    <string name="pets_title">Meus Pets</string>
+    <string name="pets_add_fab">Cadastrar Pet</string>
+    <string name="pets_empty_title">Nenhum pet cadastrado</string>
+    <string name="pets_empty_subtitle">Adicione seu companheiro para agilizar os agendamentos com cuidadores.</string>
+    <string name="register_pet_title">Cadastrar Novo Pet</string>
+    <string name="edit_pet_title">Editar Pet</string>
+    <string name="register_pet_add_photo">Adicionar Foto do Pet</string>
+    <string name="register_pet_change_photo">Trocar Foto do Pet</string>
+    <string name="register_pet_name_label">Nome do Pet</string>
+    <string name="register_pet_name_hint">ex: Thor</string>
+    <string name="register_pet_species_label">Espécie</string>
+    <string name="register_pet_breed_label">Raça</string>
+    <string name="register_pet_breed_hint">Golden Retriever</string>
+    <string name="register_pet_age_label">Idade (anos)</string>
+    <string name="register_pet_age_hint">ex: 2</string>
+    <string name="register_pet_weight_label">Peso (kg)</string>
+    <string name="register_pet_weight_hint">ex: 12.5</string>
+    <string name="register_pet_notes_label">Observações Especiais (Alergias / Remédios)</string>
+    <string name="register_pet_notes_hint">ex: Alérgico a corantes vermelhos. Toma remédio de ouvido.</string>
+    <string name="register_pet_submit">Cadastrar Pet</string>
+    <string name="save_changes">Salvar Alterações</string>
+
+    <!-- Agenda Screen -->
+    <string name="agenda_title">Agendamentos</string>
+    <string name="agenda_refresh">Atualizar</string>
+    <string name="agenda_month_title">Novembro 2026</string>
+    <string name="agenda_filter_all">Ver todos</string>
+    <string name="agenda_new_booking">Novo Agendamento</string>
+    <string name="agenda_empty_title">Nenhum agendamento encontrado</string>
+    <string name="agenda_empty_subtitle">Escolha outro dia no calendário ou crie um novo agendamento.</string>
+
+    <!-- Chat Screen -->
+    <string name="chat_title">Mensagens</string>
+    <string name="chat_empty_title">Nenhuma conversa ativa</string>
+    <string name="chat_empty_subtitle">Inicie uma conversa com um cuidador pela aba Home.</string>
+    <string name="chat_input_hint">Escreva uma mensagem...</string>
+    <string name="chat_send_cd">Enviar mensagem</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">Meu Perfil</string>
+    <string name="profile_change_photo">Alterar foto</string>
+    <string name="profile_change_banner">Alterar banner</string>
+    <string name="profile_edit_info">Editar dados</string>
+    <string name="profile_tutor_verified_badge">Tutor Verificado</string>
+    <string name="profile_tutor_pending_badge">Perfil em verificação</string>
+    <string name="profile_my_pets_section">Meus Pets Cadastrados</string>
+    <string name="profile_manage_pets">Gerenciar</string>
+    <string name="profile_data_section">Dados do Tutor</string>
+    <string name="profile_preferences_section">Preferências &amp; Alertas</string>
+    <string name="profile_account_type_label">Status da conta</string>
+    <string name="profile_notifications">Notificações do app</string>
+    <string name="profile_notifications_desc">Receber alertas de agendamentos, passeios e mensagens</string>
+    <string name="profile_detect_location">Detectar localização automática</string>
+    <string name="profile_logout">Sair da conta</string>
+
+    <!-- Notifications Center -->
+    <string name="notifications_title">Notificações</string>
+    <string name="notifications_mark_all">Marcar todas</string>
+    <string name="notifications_clear_read">Limpar lidas</string>
+    <string name="notifications_empty_title">Tudo em dia por aqui</string>
+    <string name="notifications_empty_subtitle">Quando você criar agendamentos, atualizar status ou conversar com cuidadores, os alertas aparecerão aqui.</string>
+
+    <!-- Common Content Descriptions -->
+    <string name="cd_back">Voltar</string>
+    <string name="cd_app_logo">Logo FuturusCare</string>
+    <string name="cd_notifications">Central de notificações</string>
+    <string name="cd_pet_photo">Foto do pet</string>
+    <string name="cd_caregiver_avatar">Avatar do cuidador</string>
+    <string name="cd_profile_banner">Banner do perfil</string>
+    <string name="cd_profile_avatar">Foto de perfil do tutor</string>
+    <string name="cd_clock_icon">Horário do agendamento</string>
+    <string name="cd_camera_icon">Selecionar foto</string>
+    <string name="cd_verified_badge">Perfil verificado</string>
+    <string name="cd_hero_illustration">Ilustração de cão e gato felizes</string>
 </resources>
