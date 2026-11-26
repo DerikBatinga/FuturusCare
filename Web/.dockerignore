@@ -1,0 +1,7 @@
+.git
+.codex
+.agents
+.env
+database/*.sql
+*.log
+README.local.md

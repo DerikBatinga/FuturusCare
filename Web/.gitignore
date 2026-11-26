@@ -1,0 +1,6 @@
+.env
+/public/uploads/galerias/*
+/public/uploads/perfis/*
+/public/uploads/pets/*
+*.log
+.DS_Store

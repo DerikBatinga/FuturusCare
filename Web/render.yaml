@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: futuruscare
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: APP_ENV
+        value: production
