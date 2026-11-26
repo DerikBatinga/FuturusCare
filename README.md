@@ -1,7 +1,7 @@
 <img width=100% bottom=50px src="https://i.imgur.com/WAuDwKg_d.png?maxwidth=520&shape=thumb&fidelity=high"/>
 
 <p align="center">
-  <a href="LINK_DO_SITE"><img src="https://img.shields.io/badge/Acessar%20o%20site-FuturusCare-6C2BD9?style=for-the-badge" alt="Acessar o site"/></a>
+  <a href="https://futuruscare.onrender.com/index.php"><img src="https://img.shields.io/badge/Acessar%20o%20site-FuturusCare-6C2BD9?style=for-the-badge" alt="Acessar o site"/></a>
   <a href="https://github.com/DerikBatinga/FuturusCare/releases/tag/Mobile"><img src="https://img.shields.io/badge/Baixar%20o%20app-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Baixar o app"/></a>
 </p>
 
@@ -42,13 +42,13 @@ Cada serviço passa por estados claros: **Pendente, Recusado, Agendado, Em andam
 
 | Plataforma | Link |
 |---|---|
-| Website | [Acessar](LINK_DO_SITE) |
+| Website | [Acessar](https://futuruscare.onrender.com/index.php) |
 | App Android (download) | [Download](https://github.com/DerikBatinga/FuturusCare/releases/tag/Mobile) |
 
 ## Integrantes do projeto
 - **David Texeira-<a href="https://github.com/davidteixeira23">Perfil</a>** 
 - **Derik Soares Batinga-<a href="https://github.com/SrDerik">Perfil</a>**
-- **Erick Guarassy-<a href="">Perfil</a>**
+- **Erick Guarassy-<a href="https://github.com/ErickGRSV">Perfil</a>**
 - **Gustavo Lacerda-<a href="https://github.com/GGustavo-lac">Perfil</a>** 
 - **Isaac Dantas Nogueira-<a href="https://github.com/Isaac-Nogueira">Perfil</a>** 
 
